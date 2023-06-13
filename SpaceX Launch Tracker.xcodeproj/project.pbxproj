@@ -11,6 +11,12 @@
 		CEF794572A37387B00FB2D01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794562A37387B00FB2D01 /* ContentView.swift */; };
 		CEF794592A37387C00FB2D01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF794582A37387C00FB2D01 /* Assets.xcassets */; };
 		CEF7945C2A37387C00FB2D01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF7945B2A37387C00FB2D01 /* Preview Assets.xcassets */; };
+		CEF794632A37392100FB2D01 /* LaunchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794622A37392100FB2D01 /* LaunchesModel.swift */; };
+		CEF794662A373B0100FB2D01 /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794652A373B0100FB2D01 /* LaunchesViewModel.swift */; };
+		CEF794692A374D5000FB2D01 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = CEF794682A374D5000FB2D01 /* URLImage */; };
+		CEF7946B2A374D5000FB2D01 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = CEF7946A2A374D5000FB2D01 /* URLImageStore */; };
+		CEF7946D2A3766A500FB2D01 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7946C2A3766A500FB2D01 /* DetailView.swift */; };
+		CEF794712A38409600FB2D01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794702A38409600FB2D01 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		CEF794562A37387B00FB2D01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEF794582A37387C00FB2D01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF7945B2A37387C00FB2D01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEF794622A37392100FB2D01 /* LaunchesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesModel.swift; sourceTree = "<group>"; };
+		CEF794652A373B0100FB2D01 /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
+		CEF7946C2A3766A500FB2D01 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		CEF794702A38409600FB2D01 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEF794722A388DE700FB2D01 /* SpaceX-Launch-Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SpaceX-Launch-Tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF7946B2A374D5000FB2D01 /* URLImageStore in Frameworks */,
+				CEF794692A374D5000FB2D01 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +64,14 @@
 		CEF794532A37387B00FB2D01 /* SpaceX Launch Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				CEF794722A388DE700FB2D01 /* SpaceX-Launch-Tracker-Info.plist */,
 				CEF794542A37387B00FB2D01 /* SpaceX_Launch_TrackerApp.swift */,
-				CEF794562A37387B00FB2D01 /* ContentView.swift */,
+				CEF794642A37392500FB2D01 /* Model */,
+				CEF7946E2A383FEA00FB2D01 /* View */,
+				CEF7946F2A38400200FB2D01 /* ViewModel */,
 				CEF794582A37387C00FB2D01 /* Assets.xcassets */,
 				CEF7945A2A37387C00FB2D01 /* Preview Content */,
+				CEF794702A38409600FB2D01 /* Constants.swift */,
 			);
 			path = "SpaceX Launch Tracker";
 			sourceTree = "<group>";
@@ -65,6 +82,31 @@
 				CEF7945B2A37387C00FB2D01 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEF794642A37392500FB2D01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF794622A37392100FB2D01 /* LaunchesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEF7946E2A383FEA00FB2D01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7946C2A3766A500FB2D01 /* DetailView.swift */,
+				CEF794562A37387B00FB2D01 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEF7946F2A38400200FB2D01 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEF794652A373B0100FB2D01 /* LaunchesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +125,10 @@
 			dependencies = (
 			);
 			name = "SpaceX Launch Tracker";
+			packageProductDependencies = (
+				CEF794682A374D5000FB2D01 /* URLImage */,
+				CEF7946A2A374D5000FB2D01 /* URLImageStore */,
+			);
 			productName = "SpaceX Launch Tracker";
 			productReference = CEF794512A37387B00FB2D01 /* SpaceX Launch Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +157,9 @@
 				Base,
 			);
 			mainGroup = CEF794482A37387B00FB2D01;
+			packageReferences = (
+				CEF794672A374D5000FB2D01 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = CEF794522A37387B00FB2D01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF794572A37387B00FB2D01 /* ContentView.swift in Sources */,
+				CEF794662A373B0100FB2D01 /* LaunchesViewModel.swift in Sources */,
 				CEF794552A37387B00FB2D01 /* SpaceX_Launch_TrackerApp.swift in Sources */,
+				CEF7946D2A3766A500FB2D01 /* DetailView.swift in Sources */,
+				CEF794632A37392100FB2D01 /* LaunchesModel.swift in Sources */,
+				CEF794712A38409600FB2D01 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +323,7 @@
 				DEVELOPMENT_TEAM = MNF9B6AHXC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpaceX-Launch-Tracker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +353,7 @@
 				DEVELOPMENT_TEAM = MNF9B6AHXC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpaceX-Launch-Tracker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +394,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEF794672A374D5000FB2D01 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEF794682A374D5000FB2D01 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF794672A374D5000FB2D01 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		CEF7946A2A374D5000FB2D01 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF794672A374D5000FB2D01 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEF794492A37387B00FB2D01 /* Project object */;
 }
