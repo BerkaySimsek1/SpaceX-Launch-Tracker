@@ -11,7 +11,7 @@ import SwiftUI
 struct SpaceX_Launch_TrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }

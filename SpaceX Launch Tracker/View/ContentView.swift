@@ -11,10 +11,13 @@ struct ContentView: View {
     
    
     @State private var searchText = ""
+    // Create empty list for datas
     @State var launches: [Launch] = []
     var body: some View {
         NavigationView {
             VStack{
+                
+                // Search View
                 HStack{
                     TextField("Search Launches", text: $searchText).textFieldStyle(.roundedBorder).padding(.leading)
                     Button(action: {
@@ -30,10 +33,9 @@ struct ContentView: View {
                     
                 // Sorted by launch dates
                 List(launches.sorted(by: {$0.dateUnix>$1.dateUnix})) { launch in
-                    
-                    launchListView(launch: launch)
-                    
-                }.listStyle(.plain).padding(.horizontal, 10)
+                    launchListView(launch: launch)}
+                .listStyle(.plain)
+                    .padding(.horizontal, 10)
                         // Fetching data from api
                             .onAppear{
                                 Api().fetchData { (launches) in
@@ -42,7 +44,9 @@ struct ContentView: View {
                             }
                             
                     :
-                   // Sorted by launch dates
+                
+                
+                   // Make searches (filter by textfield text)
                         List(launches.filter {
                             $0.name.range(of: searchText, options: .caseInsensitive) != nil
                         }) { launch in
@@ -62,6 +66,8 @@ struct ContentView: View {
     }
 }
 
+
+// Formatting date
 func dateFormatter(launchDate:String) -> String{
     let dateFormatter = DateFormatter()
     dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -78,6 +84,8 @@ func dateFormatter(launchDate:String) -> String{
     }
 }
 
+
+// Use colors with hex code
 extension Color {
     init(hex: UInt32) {
         let red = Double((hex >> 16) & 0xFF) / 255.0
@@ -88,6 +96,8 @@ extension Color {
     }
 }
 
+
+// Listview of Launches
 struct launchListView: View {
     var launch : Launch
     var body: some View {
@@ -97,7 +107,8 @@ struct launchListView: View {
         NavigationLink(destination: DetailView(launch: launch, amount: launch.links.flickr.original.count)){
             VStack(alignment: .leading) {
                 HStack{
-                    if(launch.upcoming == true){
+                    // Show upcoming launches
+                    if(launch.upcoming){
                         Text("Upcoming Launch")
                             .foregroundColor(Color(hex:0xfff48c06))
                             .font(.system(size: 20))
@@ -106,11 +117,14 @@ struct launchListView: View {
                         Spacer().frame(width: Constants.screenSize.width * 0.57)
                     }
                     
+                    // Show formatted date
                     Text(dateFormatter(launchDate: launch.dateUTC)).font(.system(size: 15)).foregroundColor(Color(hex: 0x9ec1a3))
                     
                 }
+                
                 HStack(spacing: 50) {
                     VStack(alignment: .leading) {
+                        // Show logos
                         AsyncImage(url: URL(string: launch.links.patch.small ?? Constants.defaultRocketPhoto)) { image in
                             image
                                 .resizable()
@@ -120,8 +134,11 @@ struct launchListView: View {
                         }
                         .frame(width: 100, height: 100)
                     }
+                    // Show name
                     Text(launch.name).font(.system(size: 23))
                 }
+                
+                // Show whether launch is succes or not
                 if let isSuccess = launch.success {
                     if(isSuccess) {
                         Text("Success")

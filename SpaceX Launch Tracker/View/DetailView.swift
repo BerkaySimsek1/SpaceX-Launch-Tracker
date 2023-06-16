@@ -15,17 +15,20 @@ struct DetailView: View {
          
     
     var body: some View {
-        ZStack{
+        ZStack(alignment: .topLeading){
             Constants.backgroundColor.ignoresSafeArea(.all).frame(maxWidth: .infinity, maxHeight: .infinity)
             
             ScrollView {
                 HStack {
                     VStack {
+                        // Show name and formatted date from top
                         Text(launch.name).font(.largeTitle)
                         Text(dateFormatter(launchDate: launch.dateUTC)).font(.system(size: 13)).foregroundColor(Color(hex: 0x9ec1a3))
                     }.padding(.leading, 25)
                     
                     Spacer()
+                    
+                    // Show if launch is succes, failure or upcoming
                     if let isSuccess = launch.success {
                         if(isSuccess){
                             customTextView(customText: "Success",customColor: Color(hex: 0xff609966))
@@ -41,12 +44,14 @@ struct DetailView: View {
                 
                 
                 
-                
+                // Show photo's
                 photoView(launch: launch, amount: amount)
                     
                 VStack(alignment: .leading){
+                    // Show launch details
                     Text(launch.details ?? "").padding(.horizontal, 5)
                     
+                    // Show more information for launch with wikipedia
                     if(launch.links.wikipedia != nil) {
                         
                         Text("Learn more").font(.system(size: 15))
@@ -55,13 +60,15 @@ struct DetailView: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                             .onTapGesture {
-                                // Handle link tap action
+                                // Takes the page
                                 guard let url = URL(string: launch.links.wikipedia!) else { return }
                                 UIApplication.shared.open(url)
                             }
                     }
-                }.foregroundColor(.white).padding(.all).background(launch.details != nil ? Color(hex: 0xff363852) : nil).cornerRadius(15).padding(.horizontal)
+                }.foregroundColor(.white).padding(.all).background(launch.details != nil ? Color(hex: 0xff363852) : nil).frame(width: Constants.screenSize.width).cornerRadius(15).padding(.horizontal)
                 
+                
+                // Show video with embeded youtube screen
                 if(launch.links.webcast != nil){
                     VStack(alignment: .leading){
                         Text("Launch Video:").padding(.horizontal)
@@ -81,6 +88,8 @@ struct DetailView: View {
     
 }
 
+
+// Make youtube screen embeded
 struct EmbedView : UIViewRepresentable {
     let videoLink: String
     
@@ -95,6 +104,8 @@ struct EmbedView : UIViewRepresentable {
         }
 }
 
+
+// Show photos
 struct photoView : View {
     @State var launch: Launch
     @State var amount: Int
@@ -119,6 +130,7 @@ struct photoView : View {
                             }.frame(width:Constants.screenSize.width)
                         }
                         
+                        // Photos switching automatically
                         .onReceive(timer) { _ in
                             currentIndex = currentIndex < amount-1 ? currentIndex + 1 : 0
                             withAnimation{value.scrollTo(currentIndex)}
@@ -132,19 +144,12 @@ struct photoView : View {
             .frame(width: Constants.screenSize.width, height: Constants.screenSize.height/3)
             
         }
+        // Show how many photos are on the screen
         if(amount != 0) {Text("\(currentIndex+1)/\(amount)")}
     }
 }
 
-
-
-
-//struct DetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailView(launch: )
-//    }
-//}
-
+// Custom textView with background
 struct customTextView: View {
     var customText: String
     var customColor: Color
@@ -158,3 +163,12 @@ struct customTextView: View {
             .padding()
     }
 }
+
+
+//struct DetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailView(launch: )
+//    }
+//}
+
+
