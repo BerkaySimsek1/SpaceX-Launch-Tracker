@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Api {
-    
+class GetLaunchInfoManager {
+    static let shared = GetLaunchInfoManager()
     func fetchData(completion:@escaping ([Launch]) -> ()) {
         guard let url = URL(string: "https://api.spacexdata.com/v4/launches") else {return}
         
