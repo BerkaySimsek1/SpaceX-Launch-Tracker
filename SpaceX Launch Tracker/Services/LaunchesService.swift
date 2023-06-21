@@ -7,24 +7,43 @@
 
 import Foundation
 
+enum ApiError: Error{
+    case networkError,requestError,timeOut,httpError,invalidURL
+}
+
 class GetLaunchInfoManager {
     static let shared = GetLaunchInfoManager()
-    func fetchData(completion:@escaping ([Launch]) -> ()) {
-        guard let url = URL(string: "https://api.spacexdata.com/v4/launches") else {return}
+    func fetchData(completion:@escaping (Result<[Launch],ApiError>) -> ()) {
+        guard let url = URL(string: "https://api.spacexdata.com/v4/launches") else {
+            completion(.failure(ApiError.invalidURL))
+            return}
         
-        URLSession.shared.dataTask(with: url) { data, _, _ in
-            
-                
-                    do {
-                        let launches = try JSONDecoder().decode([Launch].self, from: data!)
-                        
-                        DispatchQueue.main.async {
-                            completion(launches)
-                        }
-                    } catch {
-                        print(String(describing: error))
-                        print(error.localizedDescription)
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard data != nil else {
+                DispatchQueue.main.async {
+                    completion(.failure(ApiError.networkError))
+                }
+                return
+            }
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+                DispatchQueue.main.async {
+                    completion(.failure(ApiError.httpError))
+                }
+               
+                        return
                     }
+            
+            do {
+                let launches = try JSONDecoder().decode([Launch].self, from: data!)
+                        
+                DispatchQueue.main.async {
+                    completion(.success(launches))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(ApiError.requestError))
+                }
+            }
                  
             
         }

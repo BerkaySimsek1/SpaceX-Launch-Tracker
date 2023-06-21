@@ -15,7 +15,6 @@
 		CE7F5AFB2A417D9D003CDE7F /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5AFA2A417D9D003CDE7F /* PhotoView.swift */; };
 		CE7F5AFD2A417E5E003CDE7F /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5AFC2A417E5E003CDE7F /* CustomTextView.swift */; };
 		CE7F5AFF2A417ECF003CDE7F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5AFE2A417ECF003CDE7F /* VideoView.swift */; };
-		CE7F5B012A41DC61003CDE7F /* ApiErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5B002A41DC61003CDE7F /* ApiErrorHandling.swift */; };
 		CEF794552A37387B00FB2D01 /* SpaceX_Launch_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794542A37387B00FB2D01 /* SpaceX_Launch_TrackerApp.swift */; };
 		CEF794572A37387B00FB2D01 /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794562A37387B00FB2D01 /* LaunchesView.swift */; };
 		CEF794592A37387C00FB2D01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF794582A37387C00FB2D01 /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 		CE7F5AFA2A417D9D003CDE7F /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		CE7F5AFC2A417E5E003CDE7F /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		CE7F5AFE2A417ECF003CDE7F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		CE7F5B002A41DC61003CDE7F /* ApiErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorHandling.swift; sourceTree = "<group>"; };
 		CEF794512A37387B00FB2D01 /* SpaceX Launch Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Launch Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF794542A37387B00FB2D01 /* SpaceX_Launch_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_Launch_TrackerApp.swift; sourceTree = "<group>"; };
 		CEF794562A37387B00FB2D01 /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				CEF794622A37392100FB2D01 /* LaunchesModel.swift */,
-				CE7F5B002A41DC61003CDE7F /* ApiErrorHandling.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7F5B012A41DC61003CDE7F /* ApiErrorHandling.swift in Sources */,
 				CE7F5AFF2A417ECF003CDE7F /* VideoView.swift in Sources */,
 				CEF794572A37387B00FB2D01 /* LaunchesView.swift in Sources */,
 				CE7F5AFB2A417D9D003CDE7F /* PhotoView.swift in Sources */,

@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     
    
     @State private var searchText = ""
     @ObservedObject var viewModel = LaunchesViewModel()
+    @State private var error: ApiError? = nil
     var body: some View {
         NavigationView {
             VStack{
@@ -37,11 +39,28 @@ struct ContentView: View {
                             // Fetching data from api
                                 .onAppear{
                                     viewModel.getLaunchInformation()
-                            }
+                                }.alert(isPresented: $viewModel.showErrorAlert) {
+                                    Alert(title: Text("Cause of Error"), message: Text(viewModel.alertDescription),primaryButton: .default(Text("Close app app"), action: {
+                                        quitApp()
+                                    }), secondaryButton: .cancel(Text("Try again!"), action: {
+                                        viewModel.getLaunchInformation()
+                                    })
+                                    )
+                                    
+                                }
                 }
                         }.background(Constants.backgroundColor)
         }
         
+    }
+}
+
+
+//Automatically quitting app
+func quitApp() {
+    UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        exit(EXIT_SUCCESS)
     }
 }
 
