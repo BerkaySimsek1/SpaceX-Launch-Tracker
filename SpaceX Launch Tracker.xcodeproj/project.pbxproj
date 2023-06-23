@@ -15,14 +15,17 @@
 		CE7F5AFB2A417D9D003CDE7F /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5AFA2A417D9D003CDE7F /* PhotoView.swift */; };
 		CE7F5AFD2A417E5E003CDE7F /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5AFC2A417E5E003CDE7F /* CustomTextView.swift */; };
 		CE7F5AFF2A417ECF003CDE7F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5AFE2A417ECF003CDE7F /* VideoView.swift */; };
+		CE7F5B062A457E09003CDE7F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5B052A457E09003CDE7F /* DateFormatter.swift */; };
+		CE7F5B082A457E1F003CDE7F /* QuitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5B072A457E1F003CDE7F /* QuitApp.swift */; };
+		CE7F5B0B2A457E4E003CDE7F /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5B0A2A457E4E003CDE7F /* ColorHex.swift */; };
+		CE7F5B0D2A457FB7003CDE7F /* LearnMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F5B0C2A457FB7003CDE7F /* LearnMoreView.swift */; };
+		CE7F5B102A458FBE003CDE7F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CE7F5B0F2A458FBE003CDE7F /* README.md */; };
 		CEF794552A37387B00FB2D01 /* SpaceX_Launch_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794542A37387B00FB2D01 /* SpaceX_Launch_TrackerApp.swift */; };
 		CEF794572A37387B00FB2D01 /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794562A37387B00FB2D01 /* LaunchesView.swift */; };
 		CEF794592A37387C00FB2D01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF794582A37387C00FB2D01 /* Assets.xcassets */; };
 		CEF7945C2A37387C00FB2D01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF7945B2A37387C00FB2D01 /* Preview Assets.xcassets */; };
 		CEF794632A37392100FB2D01 /* LaunchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794622A37392100FB2D01 /* LaunchesModel.swift */; };
 		CEF794662A373B0100FB2D01 /* LaunchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794652A373B0100FB2D01 /* LaunchesService.swift */; };
-		CEF794692A374D5000FB2D01 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = CEF794682A374D5000FB2D01 /* URLImage */; };
-		CEF7946B2A374D5000FB2D01 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = CEF7946A2A374D5000FB2D01 /* URLImageStore */; };
 		CEF7946D2A3766A500FB2D01 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7946C2A3766A500FB2D01 /* DetailView.swift */; };
 		CEF794712A38409600FB2D01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF794702A38409600FB2D01 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,11 @@
 		CE7F5AFA2A417D9D003CDE7F /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		CE7F5AFC2A417E5E003CDE7F /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		CE7F5AFE2A417ECF003CDE7F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		CE7F5B052A457E09003CDE7F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		CE7F5B072A457E1F003CDE7F /* QuitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitApp.swift; sourceTree = "<group>"; };
+		CE7F5B0A2A457E4E003CDE7F /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
+		CE7F5B0C2A457FB7003CDE7F /* LearnMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreView.swift; sourceTree = "<group>"; };
+		CE7F5B0F2A458FBE003CDE7F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CEF794512A37387B00FB2D01 /* SpaceX Launch Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Launch Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF794542A37387B00FB2D01 /* SpaceX_Launch_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_Launch_TrackerApp.swift; sourceTree = "<group>"; };
 		CEF794562A37387B00FB2D01 /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -53,8 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF7946B2A374D5000FB2D01 /* URLImageStore in Frameworks */,
-				CEF794692A374D5000FB2D01 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,13 +109,26 @@
 				CE7F5AFA2A417D9D003CDE7F /* PhotoView.swift */,
 				CE7F5AFC2A417E5E003CDE7F /* CustomTextView.swift */,
 				CE7F5AFE2A417ECF003CDE7F /* VideoView.swift */,
+				CE7F5B0C2A457FB7003CDE7F /* LearnMoreView.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		CE7F5B042A457DEF003CDE7F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F5B052A457E09003CDE7F /* DateFormatter.swift */,
+				CE7F5B072A457E1F003CDE7F /* QuitApp.swift */,
+				CE7F5B0A2A457E4E003CDE7F /* ColorHex.swift */,
+				CEF794702A38409600FB2D01 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CEF794482A37387B00FB2D01 = {
 			isa = PBXGroup;
 			children = (
+				CE7F5B0F2A458FBE003CDE7F /* README.md */,
 				CEF794532A37387B00FB2D01 /* SpaceX Launch Tracker */,
 				CEF794522A37387B00FB2D01 /* Products */,
 			);
@@ -131,9 +150,9 @@
 				CEF794642A37392500FB2D01 /* Model */,
 				CEF7946E2A383FEA00FB2D01 /* View */,
 				CEF7946F2A38400200FB2D01 /* ViewModel */,
-				CE7F5AF22A3C794C003CDE7F /* Resources */,
 				CE7F5AF32A3C7994003CDE7F /* Services */,
-				CEF794702A38409600FB2D01 /* Constants.swift */,
+				CE7F5B042A457DEF003CDE7F /* Utils */,
+				CE7F5AF22A3C794C003CDE7F /* Resources */,
 				CEF7945A2A37387C00FB2D01 /* Preview Content */,
 			);
 			path = "SpaceX Launch Tracker";
@@ -190,8 +209,6 @@
 			);
 			name = "SpaceX Launch Tracker";
 			packageProductDependencies = (
-				CEF794682A374D5000FB2D01 /* URLImage */,
-				CEF7946A2A374D5000FB2D01 /* URLImageStore */,
 			);
 			productName = "SpaceX Launch Tracker";
 			productReference = CEF794512A37387B00FB2D01 /* SpaceX Launch Tracker.app */;
@@ -222,7 +239,6 @@
 			);
 			mainGroup = CEF794482A37387B00FB2D01;
 			packageReferences = (
-				CEF794672A374D5000FB2D01 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = CEF794522A37387B00FB2D01 /* Products */;
 			projectDirPath = "";
@@ -240,6 +256,7 @@
 			files = (
 				CE7F5AF12A3C5CB5003CDE7F /* Lobster-Regular.ttf in Resources */,
 				CEF7945C2A37387C00FB2D01 /* Preview Assets.xcassets in Resources */,
+				CE7F5B102A458FBE003CDE7F /* README.md in Resources */,
 				CEF794592A37387C00FB2D01 /* Assets.xcassets in Resources */,
 				CE7F5AED2A3C58D9003CDE7F /* Anton-Regular.ttf in Resources */,
 			);
@@ -253,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7F5AFF2A417ECF003CDE7F /* VideoView.swift in Sources */,
+				CE7F5B0B2A457E4E003CDE7F /* ColorHex.swift in Sources */,
 				CEF794572A37387B00FB2D01 /* LaunchesView.swift in Sources */,
 				CE7F5AFB2A417D9D003CDE7F /* PhotoView.swift in Sources */,
 				CE7F5AF52A403481003CDE7F /* LaunchesViewModel.swift in Sources */,
@@ -261,8 +279,11 @@
 				CE7F5AFD2A417E5E003CDE7F /* CustomTextView.swift in Sources */,
 				CEF7946D2A3766A500FB2D01 /* DetailView.swift in Sources */,
 				CEF794632A37392100FB2D01 /* LaunchesModel.swift in Sources */,
+				CE7F5B062A457E09003CDE7F /* DateFormatter.swift in Sources */,
 				CE7F5AF82A409864003CDE7F /* LaunchesListView.swift in Sources */,
+				CE7F5B082A457E1F003CDE7F /* QuitApp.swift in Sources */,
 				CEF794712A38409600FB2D01 /* Constants.swift in Sources */,
+				CE7F5B0D2A457FB7003CDE7F /* LearnMoreView.swift in Sources */,
 				CE7F5AEA2A3C516F003CDE7F /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,30 +487,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CEF794672A374D5000FB2D01 /* XCRemoteSwiftPackageReference "url-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CEF794682A374D5000FB2D01 /* URLImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEF794672A374D5000FB2D01 /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImage;
-		};
-		CEF7946A2A374D5000FB2D01 /* URLImageStore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEF794672A374D5000FB2D01 /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImageStore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEF794492A37387B00FB2D01 /* Project object */;
 }

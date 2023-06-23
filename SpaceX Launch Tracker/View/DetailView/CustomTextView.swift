@@ -5,7 +5,7 @@
 //  Created by Berkay on 20.06.2023.
 //
 
-import Foundation
+
 import SwiftUI
 
 // Custom textView with background
