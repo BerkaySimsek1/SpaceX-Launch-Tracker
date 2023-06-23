@@ -48,7 +48,6 @@ struct DetailView: View {
                 
                 
                 
-                
                 // Show photo's
                 photoView(launch: launch, amount: amount)
                     

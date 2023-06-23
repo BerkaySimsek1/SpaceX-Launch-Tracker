@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class LaunchesViewModel: ObservableObject {
     private let launchInfoManager: GetLaunchInfoManager
     @Published var launch: [Launch] = []

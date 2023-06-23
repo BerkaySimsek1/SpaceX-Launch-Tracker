@@ -5,7 +5,6 @@
 //  Created by Berkay on 23.06.2023.
 //
 
-
 import UIKit
 
 //Automatically quitting app

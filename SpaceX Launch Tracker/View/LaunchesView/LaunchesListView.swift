@@ -44,7 +44,6 @@ struct launchListView: View {
 }
 
 
-
 @ViewBuilder
 func upcomingView(_ upcoming: Bool) -> some View {
     if(upcoming){

@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     
    
-    
     @State private var searchText = ""
     @ObservedObject var viewModel = LaunchesViewModel()
     var body: some View {
