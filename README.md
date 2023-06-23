@@ -10,14 +10,10 @@ This is a SpaceX Launch Tracker application built in Swift using the SwiftUI fra
 ## Screenshots
 
 
-<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/8959e187-0a32-4ebe-8041-48d874fd0f4a.png" width="200" style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/8295e535-8ca4-4398-9dba-31de0b4f31ad.png" width="200" style="display: inline-block;">
+<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/d4e43fa8-7275-4f30-9854-4e46183df2c4.png" width="200" style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/42a0c59b-e664-4bbc-91a7-a0a4a6d59ad0.png" width="200" style="display: inline-block;">
 
 
-<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/e21fa003-e3f9-4fe4-b8c5-581589cb9807.png" width="200" style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/0f2b31da-5ffb-461b-9a23-56f37de9be93.png" width="200" style="display: inline-block;">
+<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/e8538665-6dad-4eac-9638-c401ba52d669.png" width="200" style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/bfc6bda6-f29b-4df4-88bf-a98552b1aa01.png" width="200" style="display: inline-block;">
 
 
-<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/f0de5a49-87b7-4476-b24c-c37c45d4a2bd.png" width="200" style="display: inline-block;">
-
-
-
-
+<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/22548b2c-919c-4f2f-abb2-756fb1649c5d.png" width="200" style="display: inline-block;">
