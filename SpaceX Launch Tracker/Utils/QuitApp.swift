@@ -7,6 +7,7 @@
 
 
 import UIKit
+
 //Automatically quitting app
 func quitApp() {
     UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)

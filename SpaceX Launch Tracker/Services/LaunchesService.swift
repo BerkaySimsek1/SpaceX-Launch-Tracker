@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 enum ApiError: Error{
     case networkError,requestError,timeOut,httpError,invalidURL
 }

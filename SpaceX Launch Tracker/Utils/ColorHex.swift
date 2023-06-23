@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 // Use colors with hex code
 extension Color {
     init(hex: UInt32) {

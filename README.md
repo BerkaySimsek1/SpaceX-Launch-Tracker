@@ -15,7 +15,6 @@ This is a SpaceX Launch Tracker application built in Swift using the SwiftUI fra
 
 <img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/e21fa003-e3f9-4fe4-b8c5-581589cb9807.png" width="200" style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/0f2b31da-5ffb-461b-9a23-56f37de9be93.png" width="200" style="display: inline-block;">
 
-
 <img src="https://github.com/BerkaySimsek1/SpaceX-Launch-Tracker/assets/113512628/f0de5a49-87b7-4476-b24c-c37c45d4a2bd.png" width="200" style="display: inline-block;">
 
 

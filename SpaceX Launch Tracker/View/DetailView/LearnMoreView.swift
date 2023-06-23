@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 func learnMoreView(_ link: String?) -> some View {
     Text("Learn more").font(.system(size: 15))
         .padding(.all, 3)

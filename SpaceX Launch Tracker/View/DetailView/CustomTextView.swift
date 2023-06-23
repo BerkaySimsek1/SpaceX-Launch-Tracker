@@ -9,6 +9,7 @@
 import SwiftUI
 
 // Custom textView with background
+
 struct customTextView: View {
     var customText: String
     var customColor: Color

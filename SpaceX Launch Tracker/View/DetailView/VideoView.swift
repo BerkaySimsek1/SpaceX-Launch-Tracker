@@ -8,6 +8,7 @@
 import SwiftUI
 import WebKit
 
+
 @ViewBuilder
 func videoView(_ link: String?)-> some View{
     // Show video with embeded youtube screen
