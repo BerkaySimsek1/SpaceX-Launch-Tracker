@@ -16,7 +16,7 @@ func videoView(_ link: String?)-> some View{
             Text("Launch Video:").padding(.horizontal).fontWeight(.bold)
             EmbedView(videoLink: link!).frame(height: Constants.screenSize.height * 0.3,alignment: .leading)
                 .cornerRadius(12)
-                .padding(.horizontal,24)
+                .padding(.horizontal,5)
         }.padding(.horizontal)
     }
 }

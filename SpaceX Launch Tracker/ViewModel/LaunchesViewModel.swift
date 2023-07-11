@@ -25,32 +25,27 @@ class LaunchesViewModel: ObservableObject {
                     self.launch = data
                 case .failure(let error):
                 self.showErrorAlert = true
-                if error == .networkError{
-                    
+                switch error {
+                case .noResponse:
                     self.alertDescription = "There might be a problem with your internet connection. Please check your connection and try again."
-                }else if error == .requestError {
-                   
+                case .requestError:
                     self.alertDescription = "Some error occured. Please try again later."
-                }else if error == .httpError {
+                case .invalidURL:
+                    self.alertDescription = "Invalid URL"
+                    
+                default:
                     self.alertDescription = "An error occurred while communicating with the server. Please try again later."
                 }
             }
         }
+    
+        
     }
     
     
     func getOrSearchLaunches(text: String) -> [Launch] {
-        if text.isEmpty{
-            return launch.sorted(by: {$0.dateUnix>$1.dateUnix})
-        }
-        else{
-            return launch.filter {
-                            $0.name.range(of: text, options: .caseInsensitive) != nil
-                        }
-        }
+        return text.isEmpty ? launch.sorted(by: {$0.dateUnix>$1.dateUnix}) : launch.filter { $0.name.range(of: text, options: .caseInsensitive) != nil }
     }
-    
-    
 }
 
 
