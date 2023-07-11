@@ -14,7 +14,7 @@ struct launchListView: View {
         Text("").listRowBackground(Color.clear)
         
         // Navigating to detail page
-        NavigationLink(destination: DetailView(launch: launch, amount: launch.links.flickr.original.count)){
+        NavigationLink(destination: DetailView(launch: launch)){
             VStack(alignment: .leading) {
                 HStack{
                     // Show upcoming launches
@@ -76,7 +76,8 @@ func launchLogoView(_ image: String?) -> some View {
 
 @ViewBuilder
 func launchNameView(_ name: String) -> some View {
-    Text(name).font(.system(size: 23)).frame(width: Constants.screenSize.width/3)
+    Text(name).font(.system(size: 23))
+        .frame(width: Constants.screenSize.width/3)
 }
 
 @ViewBuilder
@@ -84,7 +85,7 @@ func launchSuccesOrFailureView(_ isSuccess: Bool?) -> some View {
     if let isSuccess = isSuccess {
         if(isSuccess) {
             Text("Success")
-        }else{
+        } else {
             Text("Failure")
         }
     }

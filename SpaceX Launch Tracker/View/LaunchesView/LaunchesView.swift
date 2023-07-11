@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct LaunchesView: View {
     
    
     @State private var searchText = ""
@@ -39,7 +39,7 @@ struct ContentView: View {
                                 .onAppear{
                                     viewModel.getLaunchInformation()
                                 }.alert(isPresented: $viewModel.showErrorAlert) {
-                                    Alert(title: Text("Cause of Error"), message: Text(viewModel.alertDescription),primaryButton: .default(Text("Close app app"), action: {
+                                    Alert(title: Text("Cause of Error"), message: Text(viewModel.alertDescription),primaryButton: .default(Text("Close app"), action: {
                                         quitApp()
                                     }), secondaryButton: .cancel(Text("Try again!"), action: {
                                         viewModel.getLaunchInformation()
@@ -57,7 +57,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LaunchesView()
     }
 }
 
